@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Form & Content Page</title>
+  <meta name="description" content="A multi-section HTML page with lists, tables, media, and a fully validated HTML5 form." />
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Travel & Booking Page</h1>
+    <p>Explore our travel destinations, check our packages, and book your trip with ease.</p>
+  </header>
+
+  <main>
+    <!-- SECTION: LISTS -->
+    <section>
+      <h2>Popular Destinations</h2>
+      <ul>
+        <li>Rome, Italy</li>
+        <li>Paris, France</li>
+        <li>Kyoto, Japan</li>
+      </ul>
+    </section>
+
+    <!-- SECTION: TABLE -->
+    <section>
+      <h2>Package Prices</h2>
+      <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Package</th>
+            <th>Duration</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rome Explorer</td>
+            <td>5 days</td>
+            <td>$1,200</td>
+          </tr>
+          <tr>
+            <td>Paris Getaway</td>
+            <td>7 days</td>
+            <td>$1,800</td>
+          </tr>
+          <tr>
+            <td>Kyoto Adventure</td>
+            <td>10 days</td>
+            <td>$2,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION: MEDIA -->
+    <section>
+      <h2>Travel Highlights</h2>
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/labs/colosseo.jpg" alt="Colosseum in Rome" width="300" />
+        <figcaption>The Colosseum, Rome</figcaption>
+      </figure>
+      <video width="320" height="240" controls>
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- SECTION: FORM -->
+    <section>
+      <h2>Book Your Trip</h2>
+      <form action="#" method="post">
+        
+        <!-- Personal Info -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" placeholder="John Doe" required minlength="3" autocomplete="name">
+          
+          <br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email">
+          
+          <br><br>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </fieldset>
+
+        <br>
+
+        <!-- Trip Details -->
+        <fieldset>
+          <legend>Trip Details</legend>
+          
+          <label for="destination">Destination:</label>
+          <select id="destination" name="destination" required>
+            <option value="">--Select a destination--</option>
+            <option value="rome">Rome</option>
+            <option value="paris">Paris</option>
+            <option value="kyoto">Kyoto</option>
+          </select>
+          
+          <br><br>
+
+          <label for="travelDate">Travel Date:</label>
+          <input type="date" id="travelDate" name="travelDate" required>
+
+          <br><br>
+
+          <label>Package Type:</label>
+          <input type="radio" id="group" name="packageType" value="group" required>
+          <label for="group">Group Travel</label>
+          <input type="radio" id="private" name="packageType" value="private">
+          <label for="private">Private Tour</label>
+
+        </fieldset>
+
+        <br>
+
+        <!-- Payment Info -->
+        <fieldset>
+          <legend>Payment Information</legend>
+          
+          <label for="cardNumber">Card Number:</label>
+          <input type="text" id="cardNumber" name="cardNumber" placeholder="1234-5678-9012-3456" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+
+          <br><br>
+
+          <label for="expiry">Expiry Date:</label>
+          <input type="month" id="expiry" name="expiry" required>
+
+          <br><br>
+
+          <label for="cvv">CVV:</label>
+          <input type="password" id="cvv" name="cvv" pattern="[0-9]{3}" maxlength="3" required>
+        </fieldset>
+
+        <br>
+        <button type="submit">Submit Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Booking Page</p>
+  </footer>
+
+</body>
+</html>
